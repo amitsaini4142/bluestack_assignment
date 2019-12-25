@@ -28,3 +28,5 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   providers:[]
 })
 export class SharedModule { }
+
+//Share module is a great place to export commonly used stuff so that you dont need to import them in every module. Instead you can just import shared module

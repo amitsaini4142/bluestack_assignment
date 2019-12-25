@@ -1,9 +1,10 @@
 * {
+    // to avoid default padding margin on elements
     margin:0; 
     padding:0;
 }
 html {
-    font-size: 62.5%; 
+    font-size: 62.5%; //62.5% is used so that we can rem effecttively for example for 12px we can simply write 1.2 rem
 } 
 body {
     font-size: 14px; /*pixel fallback for rem */
@@ -15,9 +16,13 @@ h1 {
     font-size: 4.8rem;
 }
 a {
+    // removing default browser style from anchors
     color: #7788A3;
     text-decoration: none;
 }
+
+//helper classes starts
+// they are used to avoid inline styles
 .hide {
     display: none;
 }
@@ -33,18 +38,20 @@ a {
 .margin-r-10{
     margin-right: 10px;
 }
-.page-heading {
-    color:#2B416C;
-    margin: 20px 0;
-    @media screen and (max-width:480px) {
-        font-size: 30px;
-        font-size: 3rem;
-    }
-}
 .invisible-input {
     height: 0;
     width: 0;
     border: none;
+}
+//helper classes starts
+.page-heading {
+    color:#2B416C;
+    margin: 20px 0;
+    @media screen and (max-width:480px) {
+        //small font-size for heading on mobile devices so that it appear on one line
+        font-size: 30px;
+        font-size: 3rem;
+    }
 }
 .mat-button-toggle-group {
     background-color: #fff;

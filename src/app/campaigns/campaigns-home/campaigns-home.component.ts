@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { IdbService } from 'src/app/core/services';
 import { TranslateService } from '@ngx-translate/core';
 @Component({
@@ -15,10 +14,10 @@ export class CampaignsHomeComponent implements OnInit {
   campaignData:any;
   campaignTitles:any = {};
   constructor(
-    private activatedRoute: ActivatedRoute,
     private IdbService: IdbService,
     public translate: TranslateService
   ) {
+    //updating tab headings when language is toggled
     translate.stream(['titles.upcomingCampaigns', 'titles.liveCampaigns', 'titles.pastCampaigns']).subscribe(res => {
       this.campaignTabs = [
         {key:'upcoming', title: res['titles.upcomingCampaigns'] },
@@ -30,21 +29,22 @@ export class CampaignsHomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    //upcoming tab is selected by default when we land on page
     this.setActiveTabData('upcoming');
   }
   
-  setCurrentTab(tab:string) {
+  setCurrentTab(tab:string) { // set active tab
     this.activeTab = tab;
     this.setActiveTabData(tab);
   }
-  onPricingClick(campaignData){
+  onPricingClick(campaignData){ // open pricing modal
     this.selectedCampaign = campaignData;
     this.showModal = true;
   }
-  onModalClose(){
+  onModalClose(){ // close pricing modal
     this.showModal = false;
   }
-  setActiveTabData(campaign:string) {
+  setActiveTabData(campaign:string) { // fetch data to populate from indexedDB
     this.IdbService.getCampaign(campaign).then((data:any)=>{
       this.campaignData = data.value;
     });

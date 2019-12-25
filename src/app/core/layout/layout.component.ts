@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
+import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -7,16 +6,14 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent {
   
   constructor(public translate: TranslateService) {
+    // I used English and italian for demo
     translate.addLangs(['en', 'it']);
     translate.setDefaultLang('en');
 
     const browserLang = translate.getBrowserLang();
 		translate.use(browserLang.match(/en|it/) ? browserLang : 'en');		
-  }
-  ngOnInit(){
-
   }
 }

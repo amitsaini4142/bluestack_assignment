@@ -1,23 +1,14 @@
-import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'campaigns-pricing-modal',
   templateUrl: './campaign-pricing-modal.html',
   styleUrls: ['./campaign-pricing-modal.scss']
 })
-export class CampaignsPricingModal implements OnChanges {
+export class CampaignsPricingModal {
   @Input() campaignData: any;
   @Input() showModal: boolean;
   @Output() modalClose = new EventEmitter();
   onBeforeClose:boolean;
-  constructor() {
-  }
-  ngOnChanges(changes:SimpleChanges){
-    // const visibilityChange = changes.showModal;
-    // if (typeof visibilityChange !== "undefined" && !visibilityChange.firstChange) {
-    //   console.log(visibilityChange,'ggggggggggggggggggggg')
-    //   this.showModal = visibilityChange.currentValue;
-    // }
-  }
   closeModal(){
     this.onBeforeClose = true;
     setTimeout(()=>{
@@ -25,5 +16,10 @@ export class CampaignsPricingModal implements OnChanges {
       this.onBeforeClose = false;
     },300);
   }
-  
+  onWrapperClick(event){
+    if(event.target.className.includes('modal-wrapper')){
+      //close modal on outside click
+      this.closeModal();
+    }
+  } 
 }

@@ -1,4 +1,3 @@
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,7 +12,6 @@ import { CampaignsPricingModal } from './campaign-pricing-modal/campaign-pricing
     CommonModule,
     CampaignsRoutingModule,
     SharedModule,
-    FormsModule,
   ],
   declarations: [
     CampaignsHomeComponent,

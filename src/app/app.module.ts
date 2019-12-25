@@ -22,7 +22,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
-    TranslateModule.forRoot({
+    TranslateModule.forRoot({ //this module does all translation stuff
       loader: {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,
@@ -30,7 +30,6 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

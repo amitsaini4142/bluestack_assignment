@@ -1,5 +1,6 @@
 <div class="modal-overlay" *ngIf="showModal"></div>
-<div class="modal-wrapper" [ngClass]="{'modal-open': showModal, 'modal-before-close': onBeforeClose}">
+<!-- modal-before-close is used for slide up transition for 300ms while closing the modal  -->
+<div class="modal-wrapper" [ngClass]="{'modal-open': showModal, 'modal-before-close': onBeforeClose}" (click)="onWrapperClick($event)">
     <div class="modal">
         <div class="modal-body" *ngIf="campaignData">
             <div class="campaign-info">
@@ -15,6 +16,7 @@
                 <!-- heading tags are preferred because of seo purpose -->
                 <h3 class="modal-heading">{{ 'modal.pricing' | translate }}</h3>
                 <div class="pricing-details">
+                    <!-- flex here is a helper class(helper classes are used to avoid inline styling) -->
                     <div *ngFor="let pricing of campaignData.price" class="flex pricing-row">
                         <div class="pricing-timespan">{{pricing.plan}}</div>
                         <div class="pricing-value">{{pricing.amount}}</div>

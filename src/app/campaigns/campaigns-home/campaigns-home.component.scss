@@ -32,7 +32,7 @@
 			left: calc(33.333% * 2);
 		}
 	}
-	&-presentation-slider {
+	&-presentation-slider {//green bottom border. I used transition of left property for sliding animation
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -53,7 +53,7 @@
 		font-size: 18px;
 		font-size: 1.8rem;
 		@media screen and (max-width:480px) {
-			font-size: 14px;
+			font-size: 14px;//smaller font-size for mobile devices so that tab appears perfectly on all devices
 			font-size: 1.4rem;
 		}
 	}
@@ -70,15 +70,15 @@
 	}
 }
 .tab-content {
-	position: relative;
-	transition-property: opacity;
-	transition-duration: .4s;
-	transition-timing-function: linear;
-	opacity: 0;
-	height: 0;
-	&.active {
-		opacity: 1;
-		height: auto;
-		visibility: visible;
-	}
+	// position: relative;
+	// transition-property: opacity;
+	// transition-duration: .4s;
+	// transition-timing-function: linear;
+	// opacity: 0;
+	// height: 0;
+	// &.active {
+	// 	opacity: 1;
+	// 	height: auto;
+	// 	visibility: visible;
+	// }
 }
