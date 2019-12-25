@@ -12,7 +12,7 @@ export class CampaignsTableComponent {
 	@Input() activeTab: any;
 	@Output() pricingClick = new EventEmitter(); // used to trigger parent function from child
 	formatDate:any;
-	dayDiffText:any;
+	dayDiffText:any = {};
   constructor(
 		private IdbService: IdbService,// We are storing out json data on indexed db
 		private _snackBar: MatSnackBar,
