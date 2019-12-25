@@ -1,0 +1,38 @@
+header {
+    background-color: #1F2640;
+    padding: 8px 0;
+    img{
+        &.logo { 
+            height: 64px;
+            @media screen and (max-width:480px) {
+                height: 50px;
+            }
+        }
+    }
+    .content{
+        max-width: 1077px;
+        margin: auto;
+        padding: 0 20px;
+        display: flex;
+        .language-selector {
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+}
+.container {
+    max-width: 1077px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+.flag-icon{
+    height: 25px;
+    width: 25px;
+}
+@media screen and (max-width:767px) {
+    .flag-name {
+        display: none;
+    }
+}

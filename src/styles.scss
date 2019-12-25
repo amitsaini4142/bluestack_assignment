@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin:0; 
+    padding:0;
+}
+html {
+    font-size: 62.5%; 
+} 
+body {
+    font-size: 14px; /*pixel fallback for rem */
+    font-size: 1.4rem; 
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    font-size: 48px;
+    font-size: 4.8rem;
+}
+a {
+    color: #7788A3;
+    text-decoration: none;
+}
+.hide {
+    display: none;
+}
+.flex {
+    display: flex;
+}
+.flex-grow {
+    flex:1;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+.margin-r-10{
+    margin-right: 10px;
+}
+.page-heading {
+    color:#2B416C;
+    margin: 20px 0;
+    @media screen and (max-width:480px) {
+        font-size: 30px;
+        font-size: 3rem;
+    }
+}
+.invisible-input {
+    height: 0;
+    width: 0;
+    border: none;
+}
+.mat-button-toggle-group {
+    background-color: #fff;
+}
