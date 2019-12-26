@@ -10,6 +10,11 @@ A live demo can be find [Here](https://amitsaini4142.github.io).
 1. NodeJS
 2. Angular CLI
 
+## Internationalization
+Following two languages are being used here.
+1. English
+2. Italian
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
