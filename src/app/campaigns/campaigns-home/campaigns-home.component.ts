@@ -47,6 +47,8 @@ export class CampaignsHomeComponent implements OnInit {
   setActiveTabData(campaign:string) { // fetch data to populate from indexedDB
     this.IdbService.getCampaign(campaign).then((data:any)=>{
       this.campaignData = data.value;
+    }, err=>{
+      //exception handling goes here for example logging.
     });
   }
 }

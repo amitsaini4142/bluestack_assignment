@@ -47,7 +47,9 @@ export class CampaignsTableComponent {
 		const updatedCampaign = {...campaign, createdOn: timestamp};
 		this.IdbService.reScheduleCampaign(updatedCampaign, this.data, this.activeTab, index).then(()=>{
 			this.openSnackBar('Campaign rescheduled successfully');
-		});
+		}, err=>{
+      //exception handling goes here for example logging.
+    });
 	}
 	openSnackBar(message: string, action?: string) {
 		// to show toaster when rescheduling is done successfully
