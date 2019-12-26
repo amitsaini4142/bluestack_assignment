@@ -11,7 +11,7 @@ A live demo can be find [Here](https://amitsaini4142.github.io).
 2. Angular CLI
 
 ## Internationalization
-Following two labuages are being used here.
+Following two languages are being used here.
 1. English
 2. Italian
 
