@@ -4,7 +4,7 @@
 		<nav>
 			<ul class="tabs">
 				<li class="tabs-tab tab" *ngFor="let tab of campaignTabs" [ngClass]="{'active': activeTab==tab.key}">
-					<a href="javascript:void(0)" data-target="#{{tab.key}}" (click)="setCurrentTab(tab.key)" target=_self>{{tab.title}}</a>
+					<a href="javascript:void(0)" (click)="setCurrentTab(tab.key)" target=_self>{{tab.title}}</a>
 				</li>
 				<li class="tabs-presentation-slider" role="presentation"></li> <!-- this is green bottom border that slides between the tabs -->
 			</ul>
