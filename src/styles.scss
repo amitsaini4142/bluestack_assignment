@@ -7,7 +7,7 @@
     padding:0;
 }
 html {
-    font-size: 62.5%; //62.5% is used so that we can rem effecttively for example for 12px we can simply write 1.2 rem
+    font-size: 62.5%; //62.5% is used so that we can rem effecttively for example for 12px we can simply write 1.2 rem - font-size = (62.5/100)*16 = 10px
 } 
 body {
     @include font-size(1.4);
@@ -43,6 +43,9 @@ a {
     height: 0;
     width: 0;
     border: none;
+}
+.table-responsive {
+    overflow-x: auto;
 }
 //helper classes starts
 .page-heading {

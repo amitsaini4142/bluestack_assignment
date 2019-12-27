@@ -21,6 +21,15 @@ header {
             flex-grow: 1;
             align-items: center;
             justify-content: flex-end;
+            @at-root .flag-icon{
+                height: 25px;
+                width: 25px;
+            }
+            @include breakpoint(medium) {
+                @at-root .flag-name {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -28,13 +37,4 @@ header {
     max-width: 1077px;
     margin: 0 auto 50px;
     padding: 0 20px;
-}
-.flag-icon{
-    height: 25px;
-    width: 25px;
-}
-@include breakpoint(medium) {
-    .flag-name {
-        display: none;
-    }
 }

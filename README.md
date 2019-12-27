@@ -24,6 +24,7 @@ Sass CSS preprocessor is used for nesting of css properties.Beside this it is us
     1. font-size(for rem fallback)
     2. css properties that require vendor prefixes in our case(transition, transform)
     3. media query utils
+3. `@at-root` rule is used to break out of nesting thus also maintaining grouping of parent child css.
 
 ## Resposive
 UI is fully responsive for all devices possible.
