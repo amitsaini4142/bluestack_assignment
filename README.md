@@ -13,11 +13,12 @@ A live demo can be find [Here](https://amitsaini4142.github.io).
 ## Tech Stack Used
 1. Angular
 2. SCSS
+3. IndexedDB
 
-# SASS Support
+## SASS Support
 
 Sass CSS preprocessor is used for nesting of css properties.Beside this it is used in this project for following two things as well
-1. Variable
+1. Variables
     1. Heading Color
     2. Sub heading color
 2. Mixins
@@ -26,7 +27,7 @@ Sass CSS preprocessor is used for nesting of css properties.Beside this it is us
     3. media query utils
 3. `@at-root` rule is used to break out of nesting thus also maintaining grouping of parent child css.
 
-## Resposive
+## Resposiveness
 UI is fully responsive for all devices possible.
 
 ## Internationalization
