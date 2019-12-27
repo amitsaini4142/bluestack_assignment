@@ -17,7 +17,7 @@ A live demo can be find [Here](https://amitsaini4142.github.io).
 # SASS Support
 
 Sass CSS preprocessor is used for nesting of css properties.Beside this it is used in this project for following two things as well
-1. Variable
+1. Variables
     1. Heading Color
     2. Sub heading color
 2. Mixins
