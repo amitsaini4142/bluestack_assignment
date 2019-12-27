@@ -14,7 +14,7 @@ A live demo can be find [Here](https://amitsaini4142.github.io).
 1. Angular
 2. SCSS
 
-# SASS Support
+## SASS Support
 
 Sass CSS preprocessor is used for nesting of css properties.Beside this it is used in this project for following two things as well
 1. Variables
