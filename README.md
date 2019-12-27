@@ -13,6 +13,7 @@ A live demo can be find [Here](https://amitsaini4142.github.io).
 ## Tech Stack Used
 1. Angular
 2. SCSS
+3. IndexedDB
 
 ## SASS Support
 
