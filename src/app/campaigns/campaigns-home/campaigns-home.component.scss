@@ -1,3 +1,5 @@
+@import './../../shared/styles/mixins.scss';
+
 .tabs-wrapper {
 	margin-bottom: 40px;
 	border-bottom: solid 1px #F1F1F4;
@@ -19,7 +21,7 @@
 		flex-grow:1;
 		width: 33.333%;
 		text-align: center;
-		@media screen and (min-width:768px) {
+		@include breakpoint(large) {
 			min-width: 210px;
 		}
 		&:first-child.active ~ .tabs-presentation-slider {
@@ -39,7 +41,7 @@
 		width: 33.333%;
 		height: 4px;
 		background-color:#83A515;
-		transition: left .25s;
+		@include transition (left, 0.25s);
 	}
 }
 
@@ -49,12 +51,10 @@
 		padding: 20px 10px;
 		text-decoration: none;
 		color:#556789;
-		transition: color .15s;
-		font-size: 18px;
-		font-size: 1.8rem;
-		@media screen and (max-width:480px) {
-			font-size: 14px;//smaller font-size for mobile devices so that tab appears perfectly on all devices
-			font-size: 1.4rem;
+		@include transition (color, 0.15s);
+		@include font-size(1.8);
+		@include breakpoint(small) {
+			@include font-size(1.4);//smaller font-size for mobile devices so that tab appears perfectly on all devices
 		}
 	}
 	&.active {
@@ -68,17 +68,4 @@
 			color:#83A515;
 		}
 	}
-}
-.tab-content {
-	// position: relative;
-	// transition-property: opacity;
-	// transition-duration: .4s;
-	// transition-timing-function: linear;
-	// opacity: 0;
-	// height: 0;
-	// &.active {
-	// 	opacity: 1;
-	// 	height: auto;
-	// 	visibility: visible;
-	// }
 }

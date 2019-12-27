@@ -1,3 +1,6 @@
+@import './../../shared/styles/mixins.scss';
+@import './../../shared/styles/variables.scss';
+
 .table-responsive {
     overflow-x: auto;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
@@ -10,8 +13,7 @@ table {
 thead {
     background-color:#F1F1F4;
     th {
-        font-size: 16px;
-        font-size: 1.6rem;
+        @include font-size(1.6);
         color:#556789;
         padding: 12px 20px;
         text-align: left;
@@ -31,8 +33,7 @@ tbody {
         white-space: nowrap; //to avoid wrapping of text to next line on smaller screens
         padding-top: 0;
         vertical-align: top;
-        font-size: 14px;
-        font-size: 1.4rem;
+        @include font-size(1.4);
         &>div{
             padding: 12px 20px;
             border-top: 1px solid #ECECEC;
@@ -50,13 +51,12 @@ tbody {
             }
         }
         .cell-heading{
-            color: #2B416C;	
-            font-size: 16px;
-            font-size: 1.6rem;
+            color:  $heading-color;	
+            @include font-size(1.6);
             margin-bottom: 5px;
         }
         .cell-sub-heading{
-            color: #9CA2B7;
+            color: $sub-heading-color;
         }
         .action-section {
             display: flex;
@@ -79,7 +79,7 @@ tbody {
 }
 .cell-middle-action {
     margin: 0 40px;
-    @media screen and (max-width:767px) {
+    @include breakpoint(medium) {
         margin: 0 10px; //less space between actions on smaller screens
     }
 }

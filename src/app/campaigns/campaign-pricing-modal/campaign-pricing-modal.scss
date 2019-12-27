@@ -1,3 +1,6 @@
+@import './../../shared/styles/mixins.scss';
+@import './../../shared/styles/variables.scss';
+
 .modal-overlay {
     position: fixed;
     z-index: 1;
@@ -19,15 +22,15 @@
     right: 0;
     opacity: 0;
     padding-top: 70px;
-    transform: translateY(-100%);// -100% takes this out of screen used for slide up/down animation when modal is closed/opened
-    transition: transform 300ms linear, opacity 300ms ease-in-out;// duration of animation is 300ms
+    @include transform (translateY(-100%));// -100% takes this out of screen used for slide up/down animation when modal is closed/opened
+    @include transition (transform 300ms linear, opacity 300ms ease-in-out);
     &.modal-open {
-        transform: translateY(0%);
+        @include transform (translateY(0%));
         opacity: 1;
     }
     &.modal-before-close {//applies only for 300ms for animation when modal is closed
         opacity: 0;
-        transform: translateY(-100%);
+        @include transform (translateY(-100%));
     }
 }
 .modal {
@@ -41,9 +44,8 @@
     }
 }
 .modal-heading {
-    color: #2B416C;
-    font-size: 24px;
-    font-size: 2.4rem;
+    color:  $heading-color;
+    @include font-size(2.4);
 }
 .modal-footer {
     text-align: center;
@@ -51,25 +53,21 @@
     .close-btn {
         border: 2px solid #181B34;
         color: #181B34;
-        font-size: 16px;
-        font-size: 1.6rem;
+        @include font-size(1.6);
         padding: 15px 20px;
         display: inline-block;
     }
 }
 .campaign-heading {
-    color: #2B416C;
-    font-size: 16px;
-    font-size: 1.6rem;
+    color:  $heading-color;
+    @include font-size(1.6);
 }
 .campaign-sub-heading {
-    color: #9CA2B7;
-    font-size: 14px;
-    font-size: 1.4rem;
+    color: $sub-heading-color;
+    @include font-size(1.4);
 }
 .pricing-details {
-    font-size: 16px;
-    font-size: 1.6rem;
+    @include font-size(1.6);
     &>div {
         padding: 10px 0;
     }
