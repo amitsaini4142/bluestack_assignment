@@ -26,7 +26,7 @@ Sass CSS preprocessor is used for nesting of css properties.Beside this it is us
     2. css properties that require vendor prefixes in our case(transition, transform)
     3. media query utils
 
-## Resposive
+## Resposiveness
 UI is fully responsive for all devices possible.
 
 ## Internationalization
