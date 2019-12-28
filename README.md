@@ -15,6 +15,12 @@ A live demo can be find [Here](https://amitsaini4142.github.io).
 2. SCSS
 3. IndexedDB
 
+## Angular Style Guide
+This implementation follows guidelines mentioned by [Angular Style Guide](https://angular.io/guide/styleguide).This assignment also incorporates `lazyloading` of modules.Campaign module is lazily loaded in this assignment. Project is devided into three modules
+1.`Core Module` contains common layout components and services.
+2. `Shared Module` contains `shared.module.ts` which exports modules that can be used by any number of modules. Only shared module needs to be imported in these modules.
+3. `Campaign Module` This is a feature module. It has seprate components for each entities.
+
 ## SASS Support
 
 Sass CSS preprocessor is used for nesting of css properties.Beside this it is used in this project for following two things as well
